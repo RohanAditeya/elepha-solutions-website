@@ -1,13 +1,18 @@
 import { FaMessage } from "react-icons/fa6";
 import { IconContext } from "react-icons";
+import ContactUsPopUp from "./contact-popup";
+import { useState } from "react";
 
-const MessagePopUp = () => {
+const MessagePopUp = ({ isContactPopupSelected, handleMessagePopupClick }: { isContactPopupSelected:boolean, handleMessagePopupClick: () => void }) => {
     return (
-        <IconContext.Provider value={{size: "1.5em"}}>
-            <div className="flex justify-center items-center rounded-full z-999 fixed right-7 bottom-7 bg-gray-100/50 max-w-sm min-h-[65px] min-w-[65px]">
-                <FaMessage/>
-            </div>
-        </IconContext.Provider>
+        <>
+            {isContactPopupSelected && <ContactUsPopUp/>}
+            <IconContext.Provider value={{size: "1.5em"}}>
+                <div className="flex justify-center items-center rounded-full z-999 fixed right-7 bottom-7 bg-gray-100/50 max-w-sm min-h-[65px] min-w-[65px]" onClick={handleMessagePopupClick}>
+                    <FaMessage/>
+                </div>
+            </IconContext.Provider>
+        </>
     )
 }
 
@@ -30,13 +35,17 @@ const FooterSection = () => {
 }
 
 const Home = () => {
+    const [isContactPopupSelected, setIsContactPopupSelected] = useState(false)
+    const handleMessagePopupClick = () => {
+        setIsContactPopupSelected(currentElement => !currentElement)
+    }
     return (
         <>
-            <div className="flex flex-col justify-between w-screen h-screen">
+            <div className={`${isContactPopupSelected ? 'blur-md' : ''} flex flex-col justify-between w-screen h-screen`}>
                 <MainSection/>
                 <FooterSection/>
             </div>
-            <MessagePopUp/>
+            <MessagePopUp isContactPopupSelected={isContactPopupSelected} handleMessagePopupClick={handleMessagePopupClick}/>
         </>
     )
 }
