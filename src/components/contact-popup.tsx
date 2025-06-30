@@ -1,12 +1,12 @@
 const ContactUsPopUp = () => {
     return (
-        <div className="flex flex-col top-10 right-10 min-h-[80dvh] min-w-[80dvw] lg:min-w-[20dvw] z-999 bg-white fixed justify-between">
-            <div className="flex-2 bg-gray-400">
-                <p>
+        <div className="flex flex-col top-10 right-10 min-h-[80dvh] min-w-[80dvw] lg:min-w-[40dvw] z-999 bg-white fixed justify-between">
+            <div className="flex-1 bg-gray-800/40">
+                <p className="pt-6 pl-6 text-xl">
                     Elepha Solutions
                 </p>
             </div>
-            <form className="flex-8 flex flex-col">
+            <form className="flex-9 flex flex-col">
                 <div className="flex flex-col flex-1 justify-evenly">
                     <p className="flex justify-around">
                         <input className="border-1 min-w-9/10" type="text" name="user_name" placeholder="Name*" required/>
@@ -25,6 +25,11 @@ const ContactUsPopUp = () => {
                     </div>
                 </div>
             </form>
+            <div className="absolute bg-gray-300 z-999 left-5 top-20 max-w-8/10 rounded-sm">
+                <p className="p-1 pr-3 text-sm">
+                    Hi! Let us know how we can help and we'll respond shortly.
+                </p>
+            </div>
         </div>
     )
 }
