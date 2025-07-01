@@ -18,9 +18,9 @@ const MessagePopUp = ({ isContactPopupSelected, handleMessagePopupClick }: { isC
 
 const MainSection = () => {
     return (
-        <main className="flex-none bg-cover text-center text-white flex flex-col place-content-center-safe">
-            <h1 className="text-lg min-h-24 flex items-center justify-center-safe"><a className="tracking-widest font-bold">ELEPHA SOLUTIONS</a></h1>
-            <p className="text-[40px] min-h-64">Empowering your business with technology</p>
+        <main className="flex-none lg:flex-2 md:bg-center bg-cover text-center text-white flex flex-col place-content-between">
+            <h1 className="text-2xl min-h-24 flex justify-center-safe"><a className="tracking-widest pt-8 font-semibold">ELEPHA SOLUTIONS</a></h1>
+            <p className="font-[0] text-5xl min-h-64 pt-10 lg:pt-0">Empowering your business with technology</p>
         </main>
     )
 }
@@ -28,8 +28,8 @@ const MainSection = () => {
 const FooterSection = () => {
     return (
         <footer className="flex-1 text-gray-300/75 flex flex-col">
-            <h2 className="flex-1 text-3xl text-center flex items-center justify-center-safe">Contact Us</h2>
-            <p className="flex-1 text-xs text-center">Copyright &copy; {new Date().getFullYear()} Elepha Solutions - All Rights Reserved</p>
+            <h2 className="flex-1 text-3xl text-center pt-15">Contact Us</h2>
+            <p className="flex-1 md:flex-2 text-xs text-center font-semibold">Copyright &copy; {new Date().getFullYear()} Elepha Solutions - All Rights Reserved</p>
         </footer>
     )
 }
