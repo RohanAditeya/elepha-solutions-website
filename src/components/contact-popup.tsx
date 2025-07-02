@@ -1,6 +1,6 @@
 const ContactUsPopUp = () => {
     return (
-        <div className="flex flex-col top-10 right-10 min-h-[80dvh] min-w-[80dvw] lg:min-w-[40dvw] z-999 bg-white fixed justify-between">
+        <div className="flex flex-col top-10 right-10 min-h-[80dvh] min-w-[80dvw] md:min-w-[50dvw] lg:min-w-[20dvw] z-999 bg-white fixed justify-between">
             <div className="flex-1 bg-gray-800/40">
                 <p className="pt-6 pl-6 text-xl">
                     Elepha Solutions
