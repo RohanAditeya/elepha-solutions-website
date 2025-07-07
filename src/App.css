@@ -1,15 +1,141 @@
+body {
+    width: 100dvw;
+    height: 100dvh;
+    margin: 0;
+}
+
+#root {
+    width: 100dvw;
+    height: 100dvh;
+}
+
+/* Header styles */
+.pageHeader {
+    display: flex;
+    background-color: #05162a;
+    justify-content: space-between;
+}
+
+.logo {
+    padding-left: 10px;
+    max-width: 7dvw;
+    height: auto;
+    max-height: 7dvh;
+}
+
+.navButtons {
+    width: 40dvw;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-family: "Source Sans Pro", arial, sans-serif;
+}
+
+.homeNavButton, .aboutUsNavButton, .servicesNavButton {
+    flex: 1;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main Body styles */
 main {
-	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url("//img1.wsimg.com/isteam/getty/2083454645/:/rs=w:1350,m");
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 80dvh;
 }
 
-main > p {
-	font-family: "Playfair Display", Georgia, serif;
+.cover-section {
+    flex: 50dvh 1;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url("//img1.wsimg.com/isteam/getty/2083454645/:/rs=w:1350,m");
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: "Source Sans Pro", arial, sans-serif;
 }
 
-main > h1 {
-  font-family: "Source Sans Pro", arial, sans-serif;
+.cover-section > h1 {
+    letter-spacing: 1em;
 }
 
-footer > h2 {
-	font-family: "Playfair Display", Georgia, serif;
+.cover-section > p {
+    font-size: 3rem;
+    font-family: "Playfair Display", Georgia, serif;
+    padding-bottom: 60px;
+}
+
+.service-section {
+    flex: 30dvh 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.service-section > h2 {
+    flex: 1;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.services-list {
+    flex: 3;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.service-card {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+    box-shadow: 7px 8px 5px 0px #777777;
+    border: 1px solid #999;
+    border-radius: 3px;
+    max-width: 15dvw;
+    min-height: 30dvh;
+}
+
+.service-name {
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.service-description {
+    padding-left: 20px;
+    padding-right: 20px;
+    hyphens: auto;
+}
+
+.about-us-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    min-height: 50dvh;
+}
+
+.about-us-section > img {
+    max-width: 50dvw;
+    max-height: 50dvh;
+}
+
+.about-us-section > div {
+    max-width: 40dvw;
+}
+
+.about-us-section h2 {
+    flex: 1;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.about-us-section blockquote {
+    font-size: 1.5rem;
 }
