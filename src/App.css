@@ -2,6 +2,7 @@ body {
     width: 100dvw;
     height: 100dvh;
     margin: 0;
+    background-color: oklch(97.12% .002 325.59);
 }
 
 #root {
@@ -39,6 +40,18 @@ body {
     justify-content: center;
 }
 
+.servicesNavButton {
+    flex-direction: column;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+.servicesNavButton:hover .dropdown-content {
+    display: block;
+}
+
 /* Main Body styles */
 main {
     display: flex;
@@ -49,7 +62,9 @@ main {
 
 .cover-section {
     flex: 50dvh 1;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), url("//img1.wsimg.com/isteam/getty/2083454645/:/rs=w:1350,m");
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 100%), 
+        url("//img1.wsimg.com/isteam/getty/2083454645/:/rs=w:1350,m");
     background-size: cover;
     background-position: right;
     display: flex;
@@ -82,6 +97,7 @@ main {
     flex: 1;
     text-align: center;
     font-size: 2rem;
+    font-weight: lighter;
 }
 
 .services-list {
@@ -100,6 +116,11 @@ main {
     border-radius: 3px;
     max-width: 15dvw;
     min-height: 30dvh;
+    background-color: white;
+}
+
+.service-card:hover {
+    background-color: rgba(213, 236, 245, 0.5);
 }
 
 .service-name {
@@ -112,22 +133,30 @@ main {
     padding-left: 20px;
     padding-right: 20px;
     hyphens: auto;
+    font-weight: 200;
+    font-size: 0.875rem;
 }
 
 .about-us-section {
     flex: 1;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     min-height: 50dvh;
-}
-
-.about-us-section > img {
-    max-width: 50dvw;
-    max-height: 50dvh;
+    background: 
+        linear-gradient(to right, rgb(5, 22, 42) 10%, transparent),
+        url(./assets/About_Us.png);
+    background-position: bottom;
+    background-size: cover;
 }
 
 .about-us-section > div {
-    max-width: 40dvw;
+    max-width: 30dvw;
+    color: white;
+}
+
+.about-us-section > div > p {
+    padding: 30px;
+    text-align: justify;
 }
 
 .about-us-section h2 {

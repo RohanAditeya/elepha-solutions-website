@@ -1,5 +1,3 @@
-import aboutUsUrl from '../assets/About_Us.png'
-
 const services: {name: string, description: string}[] = [
     {
         name: "IT Consulting",
@@ -36,18 +34,17 @@ const Home = () => {
                 <p className="">Empowering your business with technology</p>
             </section>
             <section className="service-section">
-                <h2>Services</h2>
+                <h2>What We Do</h2>
                 <div className="services-list">
                     {services.map((service, index) => <ServiceCard key={index} name={service.name} description={service.description}/>)}
                 </div>
             </section>
             <section className="about-us-section">
-                <img src={aboutUsUrl} alt='About Us Image'/>
                 <div>
                     <h2>About Us</h2>
-                    <blockquote>
+                    <p>
                         Your Partner in IT Services, Talent Acquisition & Professional Training Delivering quality IT solutions, skilled professionals, and tailored training programs for your growth.
-                    </blockquote>
+                    </p>
                 </div>
             </section>
         </main>
