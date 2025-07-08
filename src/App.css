@@ -1,8 +1,17 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100dvw;
     height: 100dvh;
     margin: 0;
     background-color: oklch(97.12% .002 325.59);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 #root {
@@ -19,7 +28,7 @@ body {
 
 .logo {
     padding-left: 10px;
-    max-width: 7dvw;
+    max-width: 20dvw;
     height: auto;
     max-height: 7dvh;
 }
