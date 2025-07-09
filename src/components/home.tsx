@@ -1,4 +1,6 @@
+import { useState } from "react"
 import { Link } from "react-router"
+import { GrLinkNext } from "react-icons/gr";
 
 const services: {name: string, description: string, pagePath: string}[] = [
     {
@@ -23,14 +25,23 @@ const services: {name: string, description: string, pagePath: string}[] = [
     }
 ]
 
-const ServiceCard = ({name, description, pagePath}: {name: string, description: string, pagePath: string}) => {
+const ServiceGrid = () => {
+    const [selectedService, setSelectedService] = useState('IT Consulting')
     return (
-        <Link to={pagePath}>
-            <div className="service-card">
-                <p className="service-name">{name}</p>
-                <p className="service-description">{description}</p>
+        <div className="service-grid">
+            <div className="service-list">
+                <ul>
+                    <li><button onClick={() => setSelectedService('IT Consulting')}>IT Consulting</button></li>
+                    <li><button onClick={() => setSelectedService('Interview As a Service')}>Interview As a Service</button></li>
+                    <li><button onClick={() => setSelectedService('Recruitment As a Service')}>Recruitment As a Service</button></li>
+                    <li><button onClick={() => setSelectedService('Technical Workshops')}>Technical Workshops</button></li>
+                </ul>
             </div>
-        </Link>  
+            <div className="service-description">
+                <p>{services.filter(service => service.name === selectedService).map(service => service.description)[0]}</p>
+                <Link to={services.filter(service => service.name === selectedService).map(service => service.pagePath)[0]}>Know More <GrLinkNext /></Link>
+            </div>
+        </div>
     )
 }
 
@@ -43,9 +54,10 @@ const Home = () => {
             </section>
             <section className="service-section" id="service-section">
                 <h2>What We Do</h2>
-                <div className="services-list">
+                {/* <div className="services-list">
                     {services.map((service, index) => <ServiceCard key={index} name={service.name} description={service.description} pagePath={service.pagePath}/>)}
-                </div>
+                </div> */}
+                <ServiceGrid/>
             </section>
             <section className="about-us-section" id="about-us-section">
                 <div>
