@@ -5,6 +5,7 @@ import './index.css'
 import App from './App.tsx'
 import Header from './components/header.tsx'
 import Footer from './components/footer.tsx'
+import ITService from './components/services/it-services.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -14,7 +15,7 @@ createRoot(document.getElementById('root')!).render(
         <Route index element={<App/>}/>
         <Route path='about' element={<h1>This is the about Us page</h1>}/>
         <Route path='services'>
-          <Route path='it-consulting' element={<h1>IT Consulting</h1>}/>
+          <Route path='it-consulting' element={<ITService/>}/>
           <Route path='interview-as-a-service' element={<h1>Interview As a Service</h1>}/>
           <Route path='recruitment-as-a-service' element={<h1>Recruitment As a Service</h1>}/>
           <Route path='technical-workshops' element={<h1>Technical Workshops</h1>}/>
