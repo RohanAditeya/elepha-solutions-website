@@ -54,9 +54,6 @@ const Home = () => {
             </section>
             <section className="service-section" id="service-section">
                 <h2>What We Do</h2>
-                {/* <div className="services-list">
-                    {services.map((service, index) => <ServiceCard key={index} name={service.name} description={service.description} pagePath={service.pagePath}/>)}
-                </div> */}
                 <ServiceGrid/>
             </section>
             <section className="about-us-section" id="about-us-section">

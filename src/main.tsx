@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Routes } from 'react-router'
 import './index.css'
 import App from './App.tsx'
 import Header from './components/header.tsx'
-import Footer from './components/footer.tsx'
 import ITService from './components/services/it-services.tsx'
 import RecruitmentService from './components/services/recruitment-service.tsx'
 import WorkshopsService from './components/services/workshops-service.tsx'
@@ -23,7 +22,6 @@ createRoot(document.getElementById('root')!).render(
           <Route path='technical-workshops' element={<WorkshopsService/>}/>
         </Route>
       </Routes>
-      <Footer/>
     </BrowserRouter>
   </StrictMode>,
 )
