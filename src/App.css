@@ -41,7 +41,7 @@ a {
     font-family: "Source Sans Pro", arial, sans-serif;
 }
 
-.homeNavButton, .aboutUsNavButton, .servicesNavButton {
+.aboutUsNavButton, .servicesNavButton {
     flex: 1;
     font-weight: bolder;
     display: flex;
@@ -51,10 +51,31 @@ a {
 
 .servicesNavButton {
     flex-direction: column;
+    position: relative;
 }
 
 .dropdown-content {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.dropdown-content ul {
+    list-style-type: none;
+    margin-inline-start: 0px;
+    padding-inline-start: 0px;
+    margin: 0px
+}
+
+.dropdown-content li {
+    background-color: #05162a;
+    padding: 5%;
+}
+
+.aboutUsNavButton:hover, .servicesNavButton:hover, .dropdown-content li:hover {
+    background-color: rgb(48, 55, 117);
 }
 
 .servicesNavButton:hover .dropdown-content {
