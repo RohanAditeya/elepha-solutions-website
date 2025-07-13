@@ -14,6 +14,7 @@ createRoot(document.getElementById('root')!).render(
       <Header/>
       <Routes>
         <Route index element={<App/>}/>
+        <Route path='elepha-solutions-website' element={<App/>}/>
         <Route path='about' element={<h1>This is the about Us page</h1>}/>
         <Route path='services'>
           <Route path='it-consulting' element={<ITService/>}/>
