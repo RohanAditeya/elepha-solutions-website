@@ -35,7 +35,7 @@ a {
 
 .navButtons {
     width: 40dvw;
-    display: flex;
+    display: none;
     justify-content: space-around;
     color: white;
     font-family: "Source Sans Pro", arial, sans-serif;
@@ -62,14 +62,14 @@ a {
     right: 0;
 }
 
-.dropdown-content ul {
+.dropdown-content ul, .burger-menu-container ul {
     list-style-type: none;
     margin-inline-start: 0px;
     padding-inline-start: 0px;
     margin: 0px
 }
 
-.dropdown-content li {
+.dropdown-content li, .burger-dropdown-content li {
     background-color: #05162a;
     padding: 5%;
 }
@@ -80,6 +80,37 @@ a {
 
 .servicesNavButton:hover .dropdown-content {
     display: block;
+}
+
+.burger-menu-container {
+    padding-right: 1rem;
+    position: relative;
+}
+
+.header-burger-menu {
+    height: 100%;
+    width: 5dvw;
+    color: white;
+}
+
+.burger-dropdown-content {
+    background-color: rgb(48, 55, 117);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100dvw;
+    color: white;
+}
+
+@media (min-width: 800px) {
+    .navButtons {
+        display: flex;
+    }
+
+    .burger-menu-container {
+        display: none;
+    }
+    
 }
 
 /* Main Body styles */
