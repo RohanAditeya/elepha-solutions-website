@@ -78,7 +78,7 @@ a {
     background-color: rgb(48, 55, 117);
 }
 
-.servicesNavButton:hover .dropdown-content {
+.servicesNavButton:hover .dropdown-content, .servicesNavButton:active .dropdown-content, .dropdown-selected {
     display: block;
 }
 

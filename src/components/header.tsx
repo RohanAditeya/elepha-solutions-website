@@ -7,21 +7,25 @@ import { useState } from 'react';
 const Header = () => {
     const [burgerDropDownVisible, setBurgerDropDownVisible] = useState(false)
     const [burgerServiceDropdownVisible, setBurgerServiceDropDownVisible] = useState(false)
+    const setAllDropDownsToFalse = () => {
+        setBurgerDropDownVisible(false)
+        setBurgerServiceDropDownVisible(false)
+    }
     return (
         <header className='pageHeader'>
-            <Link onClick={() => setBurgerDropDownVisible(false)} to="/"><img className='logo' src={logoUrl} alt="Elepha solutions logo"/></Link>
+            <Link onClick={setAllDropDownsToFalse} to="/"><img className='logo' src={logoUrl} alt="Elepha solutions logo"/></Link>
             <div className='navButtons'>
                 <div className='aboutUsNavButton'>
-                    <p><Link to='/about'>About Us</Link></p>
+                    <p><Link onClick={setAllDropDownsToFalse} to='/about'>About Us</Link></p>
                 </div>
                 <div className='servicesNavButton'>
-                    <p><a href='#service-section'>Services</a></p>
-                    <div className='dropdown-content'>
+                    <p onClick={() => setBurgerServiceDropDownVisible((currentValue) => !currentValue)}>Services</p>
+                    <div className={`dropdown-content ${burgerServiceDropdownVisible ? 'dropdown-selected' : ''}`}>
                         <ul>
-                            <li><Link to="/services/it-consulting">IT Consulting</Link></li>
-                            <li><Link to="/services/interview-as-a-service">Interview As a Service</Link></li>
-                            <li><Link to="/services/recruitment-as-a-service">Recruitment As a Service</Link></li>
-                            <li><Link to="/services/technical-workshops">Technical Workshops</Link></li>
+                            <li><Link onClick={() => setBurgerServiceDropDownVisible(false)} to="/services/it-consulting">IT Consulting</Link></li>
+                            <li><Link onClick={() => setBurgerServiceDropDownVisible(false)} to="/services/interview-as-a-service">Interview As a Service</Link></li>
+                            <li><Link onClick={() => setBurgerServiceDropDownVisible(false)} to="/services/recruitment-as-a-service">Recruitment As a Service</Link></li>
+                            <li><Link onClick={() => setBurgerServiceDropDownVisible(false)} to="/services/technical-workshops">Technical Workshops</Link></li>
                         </ul>
                     </div>
                 </div>
