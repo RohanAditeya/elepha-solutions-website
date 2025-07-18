@@ -30,11 +30,17 @@ const ServiceGrid = () => {
     return (
         <div className="service-grid">
             <div className="service-list">
-                <ul>
+                <ul className="service-list-medium">
                     <li><button onClick={() => setSelectedService('IT Consulting')}>IT Consulting</button></li>
                     <li><button onClick={() => setSelectedService('Interview As a Service')}>Interview As a Service</button></li>
                     <li><button onClick={() => setSelectedService('Recruitment As a Service')}>Recruitment As a Service</button></li>
                     <li><button onClick={() => setSelectedService('Technical Workshops')}>Technical Workshops</button></li>
+                </ul>
+                <ul className="service-list-small">
+                    <li><Link to="/services/it-consulting"><button>IT Consulting</button></Link></li>
+                    <li><Link to="/services/interview-as-a-service"><button>Interview As a Service</button></Link></li>
+                    <li><Link to="/services/recruitment-as-a-service"><button>Recruitment As a Service</button></Link></li>
+                    <li><Link to="/services/technical-workshops"><button>Technical Workshops</button></Link></li>
                 </ul>
             </div>
             <div className="service-description">

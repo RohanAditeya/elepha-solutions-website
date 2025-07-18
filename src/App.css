@@ -102,17 +102,6 @@ a {
     color: white;
 }
 
-@media (min-width: 800px) {
-    .navButtons {
-        display: flex;
-    }
-
-    .burger-menu-container {
-        display: none;
-    }
-    
-}
-
 /* Main Body styles */
 main {
     display: flex;
@@ -136,12 +125,9 @@ main {
     font-family: "Source Sans Pro", arial, sans-serif;
 }
 
-.cover-section > h1 {
-    letter-spacing: 1em;
-}
-
 .cover-section > p {
-    font-size: 3rem;
+    font-size: 2rem;
+    text-align: center;
     font-family: "Playfair Display", Georgia, serif;
     padding-bottom: 60px;
 }
@@ -166,7 +152,7 @@ main {
     hyphens: auto;
     font-weight: 200;
     font-size: 1.5rem;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -178,7 +164,7 @@ main {
 
 .service-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     border: 1px solid #999;
     margin: 2%;
     border-radius: 0.5rem;
@@ -203,6 +189,10 @@ main {
     padding: 2%
 }
 
+.service-list-medium {
+    display: none;
+}
+
 .about-us-section {
     flex: 1;
     display: flex;
@@ -216,7 +206,7 @@ main {
 }
 
 .about-us-section > div {
-    max-width: 30dvw;
+    max-width: 90dvw;
     color: white;
 }
 
@@ -233,4 +223,44 @@ main {
 
 .about-us-section blockquote {
     font-size: 1.5rem;
+}
+
+@media (min-width: 830px) {
+    /* Header styles */
+    .navButtons {
+        display: flex;
+    }
+
+    .burger-menu-container {
+        display: none;
+    }
+
+    /* Main Body styles */
+    .cover-section > h1 {
+       letter-spacing: 1em;
+    }
+
+    .cover-section > p {
+        font-size: 3rem;
+    }
+
+    .service-description {
+        display: flex;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .service-list-small {
+        display: none;
+    }
+
+    .service-list-medium {
+        display: block;
+    }   
+
+    .about-us-section > div {
+        max-width: 30dvw;
+    }
 }
