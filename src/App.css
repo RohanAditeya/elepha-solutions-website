@@ -103,7 +103,7 @@ a {
 }
 
 /* Main Body styles */
-main {
+.main-home {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

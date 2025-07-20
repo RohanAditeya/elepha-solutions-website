@@ -53,7 +53,7 @@ const ServiceGrid = () => {
 
 const Home = () => {
     return (
-        <main>
+        <main className="main-home">
             <section className="cover-section">
                 <h1 className="">ELEPHA SOLUTIONS</h1>
                 <p className="">Empowering your business with technology</p>
